@@ -6,7 +6,13 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
+        - /RobotModel1/Status1
+        - /Axes1
         - /TF1
+        - /TF1/Frames1
+        - /TF1/Tree1
+        - /TF1/Tree1/base_link1
       Splitter Ratio: 0.5
     Tree Height: 756
   - Class: rviz/Selection
@@ -113,6 +119,15 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: false
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: <Fixed Frame>
+      Show Trail: false
+      Value: false
     - Class: rviz/TF
       Enabled: true
       Filter (blacklist): ""
@@ -142,7 +157,7 @@ Visualization Manager:
       Marker Scale: 1
       Name: TF
       Show Arrows: true
-      Show Axes: false
+      Show Axes: true
       Show Names: false
       Tree:
         base_link:
@@ -186,7 +201,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.711663246154785
+      Distance: 1.904113531112671
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -194,17 +209,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.3839346170425415
-        Y: 0.7519742846488953
-        Z: -0.8666039705276489
+        X: -0.5147945284843445
+        Y: -0.6164693832397461
+        Z: 0.7999258041381836
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8353981971740723
+      Pitch: 0.785398006439209
       Target Frame: <Fixed Frame>
-      Yaw: 5.933563709259033
+      Yaw: 0.785398006439209
     Saved: ~
 Window Geometry:
   Displays:

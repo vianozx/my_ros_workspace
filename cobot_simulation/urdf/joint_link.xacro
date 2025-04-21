@@ -56,20 +56,20 @@
             <origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
         </joint>
     </xacro:macro>
-     <!-- <xacro:macro name="transmission" params="name joint_name actuator_name">
+     <xacro:macro name="transmission" params="name joint_name actuator_name">
         <transmission name="${name}" >
             <type>transmission_interface/SimpleTransmission</type>
             <joint name = "${joint_name}" >
-                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             </joint>
             <actuator name="${actuator_name}" >
-                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
     </xacro:macro>
 
-    <xacro:macro name="transmission_effort" params="name joint_name actuator_name">
+    <!-- <xacro:macro name="transmission_effort" params="name joint_name actuator_name">
         <transmission name="${name}" >
             <type>transmission_interface/SimpleTransmission</type>
             <joint name = "${joint_name}" >
@@ -81,11 +81,7 @@
             </actuator>
         </transmission>
     </xacro:macro> -->
-     <!-- <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/cobot</robotNamespace>
-        </plugin>
-    </gazebo> -->
+     
 
     
     
