@@ -32,17 +32,17 @@ cobot:
 
   joint6_position_controller:
     type: effort_controllers/JointPositionController
-    joint: link5_link_tcp_connector 
-    pid: {p: 78, i: 10, d: 0}
+    joint: gripper_joint 
+    pid: {p: 100, i: 10, d: 0}
 
   gripper_right_position_controller:
     type: effort_controllers/JointPositionController
-    joint: tcp_connector_link_gripper_right
+    joint: gripper_right_joint
     pid: {p: 2500, i: 10, d: 10}
 
   gripper_left_position_controller:
     type: effort_controllers/JointPositionController
-    joint: tcp_connector_link_gripper_left
+    joint: gripper_left_joint
     pid: {p: 2500, i: 10, d: 10}
 
 

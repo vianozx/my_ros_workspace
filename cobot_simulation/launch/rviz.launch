@@ -2,7 +2,7 @@
 <launch>
 
     <!-- Associate to the robot description parameter, the urdf file that model the robot-->
-    <param name="robot_description" command = "$(find xacro)/xacro --inorder $(find cobot_simulation)/urdf/cobot.urdf" />
+    <param name="robot_description" command = "$(find xacro)/xacro --inorder $(find cobot_simulation)/urdf/cobot_camera.xacro" />
 
     <!-- Read the joint value-->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />

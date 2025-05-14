@@ -19,13 +19,13 @@
     <xacro:cobot_joint name="link2__link3" type="revolute" parent="link2" child="link3" axis="0.0 1 0.0" limit_l="-3.14" limit_u="3.14" limit_e="1000" limit_v="0.5" origin_xyz="0.0 -0.1 0.8" origin_rpy="0.0 0.0 0.0"/>
     <xacro:cobot_joint name="link3__link4" type="revolute" parent="link3" child="link4" axis="0.0 1 0.0" limit_l="-3.14" limit_u="3.14" limit_e="1000" limit_v="0.5" origin_xyz="0.0 0.1 0.630" origin_rpy="0.0 0.0 0.0"/>
     <xacro:cobot_joint name="link4__link5" type="revolute" parent="link4" child="link5" axis="1 0.0 0.0" limit_l="-3.14" limit_u="3.14" limit_e="1000" limit_v="0.5" origin_xyz="0.0 0.0 0.180" origin_rpy="0.0 1.57 0.0"/>
-    <!-- <xacro:gripper parent="link5" origin_xyz="0 0.0 0.125" /> -->
-    <xacro:cobot_link_box name="tcp_connector" origin_xyz="0.0 0.0 0.035" origin_rpy="0.0 0.0 0.0" size="0.03 0.15 0.03"  mass="1" ixx="0.00195" ixy="0" ixz="0" iyy="0.00195" iyz="0" izz="0.00015"/>.
+    <xacro:gripper parent="link5" origin_xyz="0.0 0.0 0.130" />
+    <!-- <xacro:cobot_link_box name="tcp_connector" origin_xyz="0.0 0.0 0.035" origin_rpy="0.0 0.0 0.0" size="0.03 0.15 0.03"  mass="1" ixx="0.00195" ixy="0" ixz="0" iyy="0.00195" iyz="0" izz="0.00015"/>.
     <xacro:cobot_joint name="link5_link_tcp_connector" type="revolute" parent="link5" child="tcp_connector" axis="0.0 0.0 1" limit_l="-3.14" limit_u="3.14" limit_e="200.0" limit_v="0.5" origin_xyz="0.0 0.0 0.130" origin_rpy="0.0 0.0 0.0"/>
     <xacro:cobot_link_box name="gripper_right" origin_xyz="0.0 0.0 0.05" origin_rpy="0.0 0.0 0.0" size="0.01 0.01 0.1" mass="0.5" ixx="0.00042" ixy="0" ixz="0" iyy="0.00042" iyz="0" izz="0.0000083"/>.
     <xacro:cobot_joint name="tcp_connector_link_gripper_right" type="prismatic" parent="tcp_connector" child="gripper_right" axis="0.0 1 0.0" limit_l="0" limit_u="0.055" limit_e="200.0" limit_v="0.5" origin_xyz="0.0 -0.065 0.03" origin_rpy="0.0 0.0 0.0"/>
     <xacro:cobot_link_box name="gripper_left" origin_xyz="0.0 0.0 0.05" origin_rpy="0.0 0.0 0.0" size="0.01 0.01 0.1" mass="0.5" ixx="0.00042" ixy="0" ixz="0" iyy="0.00042" iyz="0" izz="0.0000083"/>.
-    <xacro:cobot_joint name="tcp_connector_link_gripper_left" type="prismatic" parent="tcp_connector" child="gripper_left" axis="0.0 1 0.0" limit_l="-0.055" limit_u="0" limit_e="200.0" limit_v="0.5" origin_xyz="0.0 0.065 0.03" origin_rpy="0.0 0.0 0.0"/>
+    <xacro:cobot_joint name="tcp_connector_link_gripper_left" type="prismatic" parent="tcp_connector" child="gripper_left" axis="0.0 1 0.0" limit_l="-0.055" limit_u="0" limit_e="200.0" limit_v="0.5" origin_xyz="0.0 0.065 0.03" origin_rpy="0.0 0.0 0.0"/> -->
 
      <xacro:transmission name="trans_base_link_link1" 
                         joint_name="base_link_link1" 
@@ -48,17 +48,17 @@
                         joint_name="link4__link5" 
                         actuator_name="motor_link4__link5" />
 
-    <xacro:transmission name="trans_link5__tcp_connector" 
+    <!-- <xacro:transmission name="trans_link5__tcp_connector" 
                         joint_name="link5_link_tcp_connector" 
-                        actuator_name="motor_link5__tcp_connector" />
+                        actuator_name="motor_link5__tcp_connector" /> -->
 
-    <xacro:transmission name="trans_tcp_connector__gripper_right" 
+    <!-- <xacro:transmission name="trans_tcp_connector__gripper_right" 
                         joint_name="tcp_connector_link_gripper_right" 
                         actuator_name="motor_tcp_connector__gripper_right" />
 
     <xacro:transmission name="trans_tcp_connector__gripper_left" 
                         joint_name="tcp_connector_link_gripper_left" 
-                        actuator_name="motor_tcp_connector__gripper_left" />
+                        actuator_name="motor_tcp_connector__gripper_left" /> -->
     
 
     <gazebo>
